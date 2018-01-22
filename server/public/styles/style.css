@@ -1,3 +1,9 @@
+body, button {
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background: #484349;
+}
 img, .photoImgContainer {
     height: 200px;
     width: 266px;
@@ -9,11 +15,34 @@ img, .photoImgContainer {
     width: 266px;
     float: left;
     display: block;
-    margin: 25px 15px;
+    margin: 18px;
+    padding: 15px 15px 0 15px;
+    background: #F7F0F0;
+    text-align: left;
 }
 .photoDescription p {
     padding: 0 20px;
 }
 main { 
     margin: 0 auto;
+    width: 1000px;
+}
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+button {
+    background: #000;
+    color: #8AF3FF;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+head {
+    text-align: center;
+}
+h1 {
+    background: #8AF3FF;
+    padding: 25px;
 }
