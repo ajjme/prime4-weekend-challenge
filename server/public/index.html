@@ -13,9 +13,13 @@
     <main ng-controller="MainController as vm">
 
         <div ng-repeat="photo in vm.listArray" class="photoContainer">
-            <img ng-src="images/{{photo}}.jpg" />
-            <button ng-click="vm.like(photo)">Like</button>
-            Likes: {{vm.photosList[photo]}}
+            <div class="photoContainer">
+                <img ng-if="!photo.showReason" ng-src="images/{{photo.name}}.jpg" ng-click="vm.toggleReason(photo)" />
+                <div ng-if="photo.showReason" ng-click="vm.toggleReason(photo)" class="photoDescription">{{photo.reason}}</div>
+            </div>
+            <button ng-click="vm.like(photo.name)">Like</button>
+            Likes: {{vm.photosList[photo.name]}}
+            {{photo.reason}}
         </div>
 
     </main>
