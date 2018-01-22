@@ -19,7 +19,21 @@ router.get('/likes', (req, res) => {
     pool.query(queryString, [req.query.name])
         .then(result => {
             res.send(result.rows);
-            console.log('success', result.rows);
+            console.log('send success', result.rows);
+        })
+        .catch(err => {
+            res.sendStatus(500);
+            console.log('error');
+        });
+});
+router.put('/likes', (req, res) => {
+    console.log('hit /likes', req.body);
+    const queryString = 'UPDATE likes SET likes = $1 WHERE name = $2';
+    console.log('req.body', req.body);
+    pool.query(queryString, [req.body.data.currentLikes, req.body.data.name])
+        .then(result => {
+            res.sendStatus(201);
+            console.log('successful PUT');
         })
         .catch(err => {
             res.sendStatus(500);
