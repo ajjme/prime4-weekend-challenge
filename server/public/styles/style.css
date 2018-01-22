@@ -1,6 +1,19 @@
-img {
+img, .photoImgContainer {
     height: 200px;
+    width: 266px;
+}
+.photoDescription {
+    padding-top: 65px;
 }
 .photoContainer {
-    display: inline;
+    width: 266px;
+    float: left;
+    display: block;
+    margin: 25px 15px;
+}
+.photoDescription p {
+    padding: 0 20px;
+}
+main { 
+    margin: 0 auto;
 }
