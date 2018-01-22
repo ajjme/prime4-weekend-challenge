@@ -12,7 +12,11 @@
 <body ng-app="PhotoApp">
     <main ng-controller="MainController as vm">
 
-        <li>{{vm}}</li>
+        <div ng-repeat="photo in vm.photosList" class="photoContainer">
+            <img ng-src="images/{{photo.name}}.jpg" />
+            <button ng-click="vm.like(photo.name)">Like</button>
+            Likes: {{photo.likes}}
+        </div>
 
     </main>
     
